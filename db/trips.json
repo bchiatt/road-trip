@@ -1,0 +1,74 @@
+{
+    "_id" : {"$oid":"53f718c6f7c43b97301a1eaa"},
+    "name" : "East Coast Lovin'",
+    "origin" : {
+        "address" : "Caribou, ME, USA",
+        "lat" : "46.8639995",
+        "lng" : "-67.99803650000001"
+    },
+    "destination" : {
+        "address" : "Orlando, FL, USA",
+        "lat" : "28.5383355",
+        "lng" : "-81.37923649999999"
+    },
+    "startDate" : {"$date":"2015-09-27T00:00:00.000Z"},
+    "endDate" : {"$date":"2015-10-09T00:00:00.000Z"},
+    "car" : {
+        "photo" : [ 
+            "/img/53f718c6f7c43b97301a1eaa/0.jpg"
+        ],
+        "mpg" : 15,
+        "gas" : 3.79
+    },
+    "cash" : 3000.25
+}
+{
+    "_id" : {"$oid":"53f718fbf7c43b97301a1eab"},
+    "name" : "Coast to Coast",
+    "origin" : {
+        "address" : "Washington, DC, USA",
+        "lat" : "38.9071923",
+        "lng" : "-77.03687070000001"
+    },
+    "destination" : {
+        "address" : "Portland, OR, USA",
+        "lat" : "45.5234515",
+        "lng" : "-122.6762071"
+    },
+    "startDate" : {"$date":"2014-10-20T00:00:00.000Z"},
+    "endDate" : {"$date":"2014-10-31T00:00:00.000Z"},
+    "car" : {
+        "photo" : [ 
+            "/img/53f718fbf7c43b97301a1eab/0.jpg"
+        ],
+        "mpg" : 22,
+        "gas" : 3.14
+    },
+    "cash" : 5690
+}
+{
+    "_id" : {"$oid":"53f7192bf7c43b97301a1eac"},
+    "name" : "Midwest Cruise",
+    "origin" : {
+        "address" : "Boise, ID, USA",
+        "lat" : "43.6187102",
+        "lng" : "-116.21460680000001"
+    },
+    "destination" : {
+        "address" : "Pittsburgh, PA, USA",
+        "lat" : "40.44062479999999",
+        "lng" : "-79.99588640000002"
+    },
+    "startDate" : {"$date":"2015-02-10T00:00:00.000Z"},
+    "endDate" : {"$date":"2015-02-24T00:00:00.000Z"},
+    "car" : {
+        "photo" : [ 
+            "/img/53f7192bf7c43b97301a1eac/0.jpg"
+        ],
+        "mpg" : 25,
+        "gas" : 3.63
+    },
+    "cash" : 2400.73
+}
+
+

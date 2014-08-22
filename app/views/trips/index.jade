@@ -1,0 +1,46 @@
+extends ../shared/template
+block content
+  .row
+    .col-xs-12
+      h2 Trip Index
+  .row
+    .col-xs-12
+      table.table.table-hover
+        thead
+          tr
+            th Name
+            th Cash
+            th Origin
+            th Destination
+            th From
+            th To
+            th Stops
+            th Distance
+            th MPG
+            th Gas/Gal
+            th Gallons
+            th Cost
+            th Delta
+            th Photos
+            th Events
+        tbody
+          each trip in trips
+            tr
+              td: a(href='/trips/#{trip._id}')=trip.name
+              td $#{parseFloat(trip.cash).toFixed(2)}
+              td=trip.origin.name
+              td=trip.destination.name
+              td= moment(trip.startDate).format('MM/DD/YYYY')
+              td= moment(trip.endDate).format('MM/DD/YYYY')
+              td
+              td
+              td=trip.car.mpg
+              td $#{parseFloat(trip.car.gas).toFixed(2)}
+              td
+              td
+              td
+              td
+              td
+block scripts
+  script(src='/js/user/trips.js')
+

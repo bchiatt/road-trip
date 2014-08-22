@@ -1,0 +1,45 @@
+extends ../shared/template
+block content
+  .row
+    h2=trip.name
+  .row
+    .col-xs-12
+      #map
+  .row
+    .col-xs-12
+      table.table
+        thead
+          tr
+            th When
+            th Where
+            th Cash
+            th Distance
+        tbody
+          tr(data-tripId='#{trip._id}', data-lat1=trip.origin.lat, data-lng1=trip.origin.lng, data-lat2=trip.destination.lat, data-lng2=trip.destination.lng)
+            td #{moment(trip.startDate).format('D MMM, YY')} to #{moment(trip.endDate).format('DD MMM, YY')}
+            td #{trip.origin.address} to #{trip.destination.address}
+            td $#{parseFloat(trip.cash).toFixed(2)}
+            td
+  .row
+    .col-xs-12
+      .col-xs-6
+        #carPhoto(style='background-image: url(#{trip.car.photo})')
+        #directions
+      .col-xs-6
+        #stops
+          h3 Stops along the way:
+          ul
+            each stop in stops
+              li(data-lat=stop.loc.lat, data-lng=stop.loc.lng): a(href='/trips/#{trip._id}/stops/#{stop._id}')=stop.loc.name
+        #addStops
+         form(role='form', method='post', action='/trips/#{trip._id}/stops')
+            .form-group
+              button.btn.btn-success#add-stop(type='button') Add Stop
+            .form-group.stop-group
+              input.form-control.stops(type='text', name='stops')
+            button.btn.btn-primary(type='submit') Add Stops to Trip
+        #distance
+
+block scripts
+  script(src='/js/user/trip-show.js')
+

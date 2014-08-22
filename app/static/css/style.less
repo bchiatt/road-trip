@@ -1,6 +1,37 @@
-@base: #f938ab;
+@base: #EED274;
+@base-light: #FFEBA7;
+@highlight: #EE9F74;
 
 body{
   background-color: saturate(@base, 5%);
 }
 
+.navbar{
+  background-color: saturate(@highlight, 10%);
+}
+
+table{
+  background-color: @base-light;
+}
+
+#map{
+  height: 500px;
+}
+
+#carPhoto{
+  background-size: cover;
+  height: 300px;
+}
+
+#directions{
+  height: 300px;
+  overflow: scroll;
+}
+
+#map-small{
+  height: 350px;
+}
+
+#photo-stop{
+  height: 350px;
+}
