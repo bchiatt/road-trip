@@ -1,7 +1,7 @@
 ## name of project
 ### Code Badges
-build status icon
-coverage status icon
+[![Build Status](https://travis-ci.org/bchiatt/road-trip.svg)](https://travis-ci.org/bchiatt/road-trip)
+[![Coverage Status](https://coveralls.io/repos/bchiatt/rehab-schedule/badge.png)](https://coveralls.io/r/bchiatt/rehab-schedule)
 
 ### About
 write a description about your project
